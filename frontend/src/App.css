@@ -1,0 +1,196 @@
+
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+/* styles.css */
+/* This file contains all the component and layout styles. */
+
+/* --- Global Styles --- */
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.auth-container {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+}
+
+.auth-card {
+  background-color: var(--card-bg-color);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  box-shadow: var(--card-shadow);
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.auth-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--text-color);
+}
+
+.auth-header p {
+  color: var(--subtle-text-color);
+  margin: 0 0 2rem;
+}
+
+/* --- Theme Switcher --- */
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    padding: 8px;
+    background-color: var(--card-bg-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--card-shadow);
+}
+
+.theme-switcher svg {
+    width: 20px;
+    height: 20px;
+    color: var(--text-color);
+}
+
+/* --- Form Elements --- */
+.form-group {
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-bg-color);
+  color: var(--text-color);
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--input-focus-border-color);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--input-focus-border-color) 25%, transparent);
+}
+
+.auth-btn {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 1rem;
+}
+
+.auth-btn:hover {
+  background-color: var(--primary-hover-color);
+}
+
+.auth-switch-link {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--subtle-text-color);
+}
+
+.auth-switch-link a {
+  color: var(--primary-color);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.auth-switch-link a:hover {
+  text-decoration: underline;
+}
+
+/* --- Role Toggle --- */
+.role-toggle {
+  display: flex;
+  background-color: var(--input-bg-color);
+  border-radius: 0.75rem;
+  padding: 0.25rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.role-toggle-option {
+  flex: 1;
+  padding: 0.625rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--subtle-text-color);
+  cursor: pointer;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.role-toggle-option.active {
+  color: var(--text-color);
+}
+
+.role-toggle-slider {
+  position: absolute;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: calc(50% - 0.25rem);
+  background-color: var(--card-bg-color);
+  border-radius: 0.625rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.role-toggle-slider.food-partner {
+  transform: translateX(calc(100% - 0.25rem));
+}
+
+/* --- Logged Out Page --- */
+.logged-out-card {
+    text-align: center;
+}
+.logged-out-card h1 {
+    margin-bottom: 1rem;
+}
+ .logged-out-card p {
+    margin-bottom: 2rem;
+    color: var(--subtle-text-color);
+}
+.logged-out-actions {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+}
+.secondary-btn {
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
+}
+.secondary-btn:hover {
+    background-color: color-mix(in srgb, var(--input-bg-color) 90%, black);
+}
+
